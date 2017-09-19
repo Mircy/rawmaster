@@ -1,0 +1,706 @@
+/*
+Created by Mircea Gancea 05.05.2017,
+Modified by Mircea Gancea 12.09.2017
+*/
+
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*General Settings*/
+body {
+	width: 75%;
+	margin: 0 auto;
+}
+
+h1 {
+	float: left;
+}
+
+main {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 6em;
+	display: block;
+	overflow: hidden;
+}
+
+main img {
+	border-radius: 1em;
+}
+
+main ul li a {
+	display: block;
+}
+
+main div {
+	overflow: hidden;
+}
+
+main {
+	
+}
+
+/*Header*/
+
+header {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+	padding: 0 0 0em 0em;
+	position: fixed;
+	background-color: #ffffff;
+	height: 7em;
+	z-index: 10;
+}
+
+body,header {
+  /background: linear-gradient(180deg, #ffffff 25%, #f2f2f2 75%);
+  /background: linear-gradient(180deg, #ffffff 25%, #e6f5ff 75%);
+  background-size: 9em 9em;
+  background-attachment: fixed;
+}
+
+#logo {
+	display: block;
+	float: left;
+	margin: 0 0.5em 0em 1.5em;
+	border-right: 1px solid #0099ff;
+	border-bottom: 1px solid #0099ff;
+	border-radius: 1em;
+}
+
+#logo img {
+	border-radius: 1em;
+}
+
+#main_nav {
+	float: left;
+	margin-left: 3em;
+}
+
+#main_nav ul {
+	list-style-type: none;
+	margin-top: 2em;
+}
+
+#main_nav ul li {
+	float: left;
+	margin: 0 1em 0 0;
+	border-left: 1px solid #0099ff;
+	border-bottom: 1px solid #0099ff;
+	border-radius: 0.5em;
+}
+
+#main_nav ul li a {
+	text-decoration: none;
+	padding: 1em 1em 1em 1em;
+	color: #000000;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#main_nav ul li a:hover {
+	color: #FFA500;
+}
+
+#main_nav .current {
+	color: #0099ff;
+}
+
+#button {
+	display: none;
+}
+
+.hide_nav {
+	display: none;
+}
+.show_nav {
+	display: block;
+}
+
+
+/*Home*/
+
+#home_content {
+	padding: 7.25em 0 2em 0;
+	overflow: hidden;
+}
+
+/#home_content ul li img {
+	height: 350px;
+	width: 250px;
+}
+
+#home_img ul {
+	list-style-type: none;
+}
+
+#home_img li {
+	float: left;
+	padding: 0.5em 0 0 0.5em;
+	margin: 0 0 1em 1em;
+	display: block;
+}
+
+
+.display_category {
+	display: block;
+	background-color: grey;
+	position: absolute;
+	width: 250px;
+	margin: 11.5em 0 0 0;
+	text-align: center;
+	opacity: 0.75;
+	color: white;
+	font-size: 1.75em;
+	border-bottom-right-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	visibility: hidden;
+}
+
+#home_img li:hover .display_category {
+	visibility: visible;
+}
+
+#home_div {
+	width: 100%;
+	clear: left;
+	margin: 0 0 0 1.5em;
+}
+
+#home_div img {
+	width: 95%;
+	height: auto;
+}
+
+/*About Me*/
+
+#about_me_content {
+	padding: 5em 0 2em 0;
+	overflow: hidden;
+}
+
+#about_me_content img {
+	float: right;
+	margin: 3em 4em 10em 0em;
+	display: block;
+}
+
+#about_me_text {
+	border: 2px solid #00bfff;
+	border-radius: 1em;
+	margin: 5em 0em 1em 1.5em;
+	width: 45%;
+	padding: 0 1em 1em 2em;
+	background-color: #e6f5ff;
+	float: left;
+}
+
+#about_me_text h2 {
+	padding: 0.5em 0 0.5em 2em;
+	font-size: 2em;
+}
+
+#about_me_text p {
+	font-size: 1.5em;
+	text-indent: 1em;
+	/border-bottom: 1px solid #0099ff;
+	padding: 0.25em 0 0.25em 0;
+}
+#about_me_text p:last-of-type {
+	border-bottom: none;
+}
+
+/*Portofolio*/
+
+#portofolio_content {
+	padding: 3.75em 0 2em 0;
+	overflow: hidden;
+}
+
+#portofolio_content {
+   position: relative;
+   z-index: 1;
+}
+
+#portrait_slide {
+	padding: 4em 0 0 0;
+}
+
+.slide_container{
+	display: block;
+	float: left;
+	padding:0 2em 2em 0;
+}
+
+#wide_slide {
+	clear: left;
+}
+
+/*Contact*/
+
+#contact_content {
+	background-image: url('../images/contact_img2.jpg');
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	padding: 7em 0 2em 0;
+	overflow: hidden;
+}
+
+
+form {
+	float: right;
+	width: 40%;
+	padding: 2em 5em 15em 3.5em;
+	margin-right: 1em;
+	display: block;
+	color: white;
+}
+#confirm {
+	color: white;
+	padding: 0 0 14em 0;
+	font-size: 3em;
+}
+
+#form_errors {
+	color: white;
+	padding: 0em 1em 4em 1em;
+	font-size: 1.5em;
+}
+form p {
+	font-size: 1.25em;
+	text-indent: 1em;
+	margin: 0 0 1em 0;
+}
+
+label {
+	float: left;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+input {
+	width: 25em;
+	height: 2em;
+	border: 1px solid #0099ff;
+}
+
+#send {
+	width: 6em;
+	border-radius: 0.4em;
+	margin: 0 0 0 2em;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+fieldset{
+	border-radius: 2em;
+	border: 1px solid #0099ff;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.form_control {
+	padding-bottom: 2em;
+	margin: 0 0 0 2em;
+}
+
+textarea {
+	height: 7em;
+	width: 25em;
+	border: 1px solid #0099ff;
+}
+
+.input_error {
+	color: #ff0000;
+}
+
+#contact_content img {
+	float: left;
+	margin: 3em 4em 2em 5em;
+	display: none;
+}
+
+/*Footer*/
+
+footer {
+	display: block;
+	clear: left;
+	background-color: #ffffff;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 0 0 2em;
+}
+
+footer p {
+	float: left;
+	padding: 0em 1em 1em 0;
+	font-size: 1.25em;
+	margin: 1em 0 0 0;
+}
+
+footer a {
+	color: blue;
+}
+
+#copyright {
+	float: right;
+	padding: 0 6em 0 0;
+	color: #00bfff;
+}
+
+span a:visited {
+	color: white;
+}
+
+#top_link{
+	visibility: hidden;
+}
+
+/*Breakpoints*/
+
+@media screen and (max-width: 1810px){
+	#portofolio_content {
+		width: 150%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1400px){
+	#about_me_content {
+		width: 100%;
+		margin: 0 auto;
+		padding: 5em 0 2em 0;
+		overflow: hidden;
+	}
+	#about_me_content img {
+		margin: 5em 0 10em 0;
+	}
+
+	#about_me_text {
+		width: 45%;
+	}
+}
+
+@media screen and (max-width: 1230px){
+	#main_nav {
+		float: left;
+		display: block;
+		margin-left: 1em;
+	}
+	#about_me_content img {
+		float: left;
+		margin: 2em 0 2em 2em;
+	}
+
+	#about_me_text {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	body {
+		width: 85%;
+		margin: 0 auto;
+	}
+	
+	#home_img img {
+		min-height: 560px;
+		min-width: 400px;
+	}
+	
+	#home_div img {
+		width: 95%;
+		height: auto;
+		margin: 0 2em 0 0;
+	}
+	
+	#home_img img {
+		min-height: 490px;
+		min-width: 350px;
+		
+	}
+	.display_category {
+	display: block;
+	background-color: grey;
+	width: 350px;
+	margin: 14.3em 0 0 0;
+	font-size: 2em;
+	}
+	
+	#portofolio_content {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	footer div {
+		margin: 0 1em 0 0;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body {
+		width: 85%;
+		margin: 0 auto;
+	}
+	
+	header {
+		position: relative;
+		overflow: hidden;
+		z-index: 0;
+		height: auto;
+	}
+	#logo {
+		border-right: none;
+		border-bottom: none;
+		border-radius: 0;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 0 0 5em;
+	}
+	
+	#main_nav {
+		display: none;
+	}
+	
+	#button {
+		padding: 0.5em 0 0 0.5em;
+		text-decoration: none;
+		color: #000000;
+		font-size: 2em;
+		display: block;
+		clear: left;
+		width: 25%;
+		margin: 0 auto;
+		font-weight: bold;
+	}
+	
+	#mobile_nav {
+		padding: 0.5em 0 0 0;
+		width: 60%;
+		margin: 0 auto;
+	}
+	#logo {
+		float: none;
+		display: block;
+		width: 45%;
+		margin: 0 auto;
+	}
+	
+	#mobile_nav ul {
+		list-style-type: none;
+		margin-top: 1em;
+	}
+
+	#mobile_nav ul li {
+		margin: 1em 1em 0 0;
+		border: 1px solid #0099ff;
+		border-radius: 0.5em;
+		text-align: center;
+	}
+
+	#mobile_nav ul li a {
+		display: block;
+		text-decoration: none;
+		margin: 0.1em 0.1em 0.1em 0.1em;
+		color: #000000;
+		font-weight: bold;
+		font-size: 2em;
+		position: center;
+	}
+	
+	body {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	#home_content {
+		padding: 0.5em 0 0 0;
+	}
+	
+	.display_category {
+	display: block;
+	background-color: grey;
+	width: 350px;
+	margin: 14.3em 0 0 0;
+	font-size: 2em;
+	visibility: visible;
+	}
+	#about_me_content {
+		padding: 1em 0 2em 0;
+	}
+	#about_me_text {
+		margin-top: 0;
+	}
+	#portofolio_content {
+		padding: 0 0 2em 0;
+	}
+	#portrait_slide {
+		padding: 1em 0 0 0;
+	}
+	#contact_content{
+		margin: 1em 0 0 0;
+	}
+	form {
+	float: none;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: -4em;
+	padding: 0 0 0 0;
+	
+}
+
+#top_link{
+	visibility: visible;
+clear: left;
+}
+#copyright {
+	float: left;
+	clear: left;
+}
+
+footer p {
+	
+	padding: 0em 1em 0em 0;
+	font-size: 1.25em;
+	margin: 1em 0 0 0;
+}
+
+}
+
+@media screen and (min-width: 1000px){
+	.show_nav {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 770px){
+	#logo {
+		
+		padding: 0 0 0 4em;
+	}
+	#home_img img {
+		min-height: 420px;
+		min-width: 300px;
+	}
+	.display_category {
+	display: block;
+	background-color: grey;
+	width: 300px;
+	margin: 12.15em 0 0 0;
+	font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 670px){
+		#logo {
+		
+		padding: 0 0 0 0.5em;
+	}
+	#home_img img {
+		min-height: 560px;
+		min-width: 400px;
+	}
+	.display_category {
+	display: block;
+	background-color: grey;
+	width: 400px;
+	margin: 16.5em 0 0 0;
+	text-align: center;
+	font-size: 2em;
+	}
+	#home_div img {
+	width: 90%;
+	height: auto;
+}
+	#about_me_content img {
+		margin: 2em 0 0 1em;
+	}
+	#about_me_text{
+		margin-left: 1em;
+	}
+	#about_me_text h2 {
+		padding: 0.5em 0 0.5em 0.5em;
+		font-size: 2em;
+	}
+	#contact_content {
+		background-image: url('../images/contact_imgM.jpg');
+		background-attachment: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding: 7em 0 2em 0;
+	}
+	form {
+		width: 90%;
+		margin-left: 1em;
+	}
+	input {
+		width: 20em;
+	}
+	textarea {
+		width: 20em;
+	}
+}
+
+
+
+
+
+
+
+
