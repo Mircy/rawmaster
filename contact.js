@@ -69,8 +69,8 @@ function blurValidate(){
 
 function init() {
 	blurValidate();
-    //submitValidate();
-	//document.getElementById("name").focus();
+    	submitValidate();
+	document.getElementById("name").focus();
 }
 
 window.onload = init;
